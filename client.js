@@ -13,12 +13,10 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log('Successfully connected to game server!')
-    setInterval(() => {
       conn.write("Move: up");
       conn.write("Move: left");
       conn.write("Move: down");
       conn.write("Move: right");
-    }, 500);
   });
 
   // process.stdin.on('data', (typedData) => {
@@ -35,4 +33,4 @@ const connect = function() {
   return conn;
 }
 
-module.exports = connect;
+module.exports = {connect};
