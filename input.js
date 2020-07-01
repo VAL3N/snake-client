@@ -19,6 +19,8 @@ const handleUserInput = (data) => {
     connection.write('Move: down');
   }  else if (data === 'd') {
     connection.write('Move: right');
+  } else if (data === 'g') {
+    connection.write('Say: ITS OVER 9000!');
   }
 }
 
